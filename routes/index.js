@@ -7,6 +7,9 @@ var Skills = function () {
 var Ed = function () {
   return knex('ed')
 }
+var Exp = function () {
+  return knex('exp')
+}
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'PORTFOLIO' });
@@ -21,6 +24,12 @@ router.get('/skills', function(req, res, next) {
 router.get('/ed', function(req, res, next) {
   Ed().select().then(function (ed) {
     res.json(ed)
+  })
+});
+
+router.get('/exp', function(req, res, next) {
+  Exp().select().then(function (exp) {
+    res.json(exp)
   })
 });
 
