@@ -33,4 +33,10 @@ router.get('/exp', function(req, res, next) {
   })
 });
 
+router.get('/projects', function(req, res, next) {
+  Proj().select().then(function (projects) {
+    res.json(projects)
+  })
+});
+
 module.exports = router;
