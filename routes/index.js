@@ -10,6 +10,9 @@ var Ed = function () {
 var Exp = function () {
   return knex('exp')
 }
+var Proj = function () {
+  return knex('projects')
+}
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'PORTFOLIO' });
