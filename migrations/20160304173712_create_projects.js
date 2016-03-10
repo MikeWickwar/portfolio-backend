@@ -5,6 +5,8 @@ exports.up = function(knex, Promise) {
   table.string('gitlink');
   table.string('deploy');
   table.string('description');
+  table.string('img');
+  table.string('img2');
   })
 };
 
